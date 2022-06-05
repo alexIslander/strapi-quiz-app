@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "answers",
+  "info": {
+	"singularName": "answer",
+	"pluralName": "answers",
+	"displayName": "Answer",
+	"description": ""
+  },
+  "options": {
+	"draftAndPublish": false,
+	"comment": ""
+  },
+  "attributes": {
+	"value": {"type": "text","required": true},
+	"question": {"type": "relation","relation": "oneToOne","target": "api::question.question"},
+	"score": {"type": "relation","relation": "manyToOne","target": "api::score.score","inversedBy": "answers"}
+  }
+}
